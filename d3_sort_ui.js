@@ -1,27 +1,26 @@
 // Controller Status
 var startButton_status = "start";
-var startButton, randomButton;			// DOM elements
+var startButton, randomButton;
 
 // Bar Slider
-var   barsSlider;				// DOM element
-const barsArray  = [5, 10, 25, 50];
+var   barsSlider;
+const barsArray = [5, 10, 25, 50];
 
 // Scan Slider
-var   scanSlider;				// DOM element
-const scanArray  = [50, 75, 150, 300];
-var   scanDelay    = 75;
+var   scanSlider;
+const scanArray = [50, 75, 150, 300];
+var   scanDelay = 75;
 
 // Animation Slider
-var   animationSlider;				// DOM element
-const animationArray  = [300, 600, 750, 1000];
-var   animationDelay  = 300;
+var   animationSlider;
+const animationArray = [300, 600, 750, 1000];
+var   animationDelay = 300;
 
-// Counter					// DOM elements
+// Counter
 var counterDuration, counterComparisons;
 var counterSwaps, counterReads, counterWrites, counterAccesses;
 
-// "Algorithm" Input Radio			// DOM elements
-// var algoSort = standardBottomUpInsertionSort;	// Initial algorithm selection
+// "Algorithm" Input Radio
 var leftLabel, rightLabel, leftRadio, rightRadio;
 var leftAction, rightAction;
 
@@ -59,7 +58,6 @@ function configureUI(algoConfig) {
 	randomButton.addEventListener("click",      () => controllerAction("randomise"));
 	window.onresize                           = () => controllerAction("display");
 
-	
 	if (typeof algoConfig !== 'undefined') {
 		divAlgoRadio.addEventListener("change", () => controllerAction("algo"));
 
