@@ -1,1 +1,68 @@
-
+/* Hide the default checkbox */
+.toggle-switch input {
+  display: none;
+}
+/* Toggle switch slider */
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 14px;
+  background-color: #ccc;
+  border-radius: 14px;
+  transition: background-color 0.4s;
+}
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s;
+}
+/* Toggle switch effect */
+input:checked + .slider {
+  background-color: #2196F3;
+}
+input:checked + .slider::before {
+  transform: translateX(10px);
+}
+#controller, #barsSlider {
+  width: 80%;
+}
+* {
+  box-sizing: border-box;
+}
+  .table {
+      display: table;
+  width: 100%;
+  padding-bottom: 25px;
+  }
+  .row {
+    display: table-row;
+}
+.column {
+  display: table-cell;
+    float: left;
+    padding: 10px;
+}
+.bigo {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+}
+.algo_type {
+  font-weight: bold;
+  font-size: 23px;
+}
+.algo_name {
+  font-weight: normal;
+  font-size: 20px;
+}
+.debug {
+  font-weight: bold;
+  font-size: 18px;
+}
